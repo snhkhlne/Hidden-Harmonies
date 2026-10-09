@@ -1,0 +1,846 @@
+/* =========================================
+   HIDDEN HARMONIES
+   COLOR PALETTE
+========================================= */
+
+:root {
+    --golden-honey: #F4CD3F;
+    --champagne-sand: #EFD99C;
+    --mulberry-mist: #844469;
+
+    --dark-mulberry: #5E304B;
+    --soft-cream: #FFF8E5;
+}
+
+
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--champagne-sand);
+    color: var(--mulberry-mist);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 24px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--champagne-sand);
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--mulberry-mist);
+}
+
+.logo span {
+    color: var(--golden-honey);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+
+    background-color: var(--golden-honey);
+
+    bottom: -6px;
+    left: 0;
+
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+.login-button {
+    background-color: var(--mulberry-mist);
+    color: var(--soft-cream);
+
+    padding: 11px 22px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: var(--golden-honey);
+    color: var(--mulberry-mist);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 70px 7% 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.hero-content {
+    width: 55%;
+    position: relative;
+    z-index: 2;
+}
+
+.small-heading {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.98;
+    font-weight: 600;
+
+    max-width: 850px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-content h2 span {
+    color: var(--mulberry-mist);
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 520px;
+    font-size: 18px;
+    line-height: 1.7;
+
+    margin: 30px 0;
+}
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    background-color: var(--mulberry-mist);
+    color: var(--soft-cream);
+
+    border-radius: 35px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.main-button span {
+    font-size: 20px;
+}
+
+.main-button:hover {
+    background-color: var(--golden-honey);
+    color: var(--mulberry-mist);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(132, 68, 105, 0.2);
+}
+
+
+/* =========================================
+   HERO VINYL DECORATION
+========================================= */
+
+.hero-decoration {
+    width: 38%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.vinyl {
+    width: 340px;
+    height: 340px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #272024 0px,
+            #272024 5px,
+            #30272C 6px,
+            #30272C 8px
+        );
+
+    border: 18px solid var(--mulberry-mist);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 15px 20px 40px rgba(80, 40, 60, 0.25);
+
+   
+}
+
+.vinyl-center {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background-color: var(--golden-honey);
+
+    border: 8px solid var(--champagne-sand);
+
+    position: relative;
+}
+
+.vinyl-center::after {
+    content: "";
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: var(--mulberry-mist);
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+.circle-one {
+    width: 160px;
+    height: 160px;
+
+    background-color: var(--golden-honey);
+
+    top: -40px;
+    right: 20px;
+
+    animation: circleFloat 4s ease-in-out infinite;
+}
+
+.circle-two {
+    width: 90px;
+    height: 90px;
+
+    background-color: var(--mulberry-mist);
+
+    bottom: 20px;
+    left: 20px;
+
+    animation: circleFloat 5s ease-in-out infinite reverse;
+}
+
+
+/* =========================================
+   STORY
+========================================= */
+
+.story-section {
+    padding: 120px 7%;
+
+    background-color: var(--mulberry-mist);
+    color: var(--soft-cream);
+}
+
+.story-section .small-heading {
+    color: var(--golden-honey);
+}
+
+.section-heading {
+    max-width: 800px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.story-content {
+    max-width: 900px;
+
+    margin: 70px auto 0;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+.story-label {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    color: var(--golden-honey);
+
+    padding-top: 8px;
+}
+
+.story-text {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.story-text p + p {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   ARTISTS
+========================================= */
+
+.artists-section {
+    padding: 120px 7%;
+}
+
+.artists-section .section-heading {
+    margin-bottom: 65px;
+}
+
+.artists-section .section-heading > p:last-child {
+    max-width: 550px;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.artist-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.artist-card {
+    background-color: var(--soft-cream);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(132, 68, 105, 0.08);
+}
+
+.artist-image {
+    height: 300px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+.artist-one {
+    background-color: #d6a96f;
+}
+
+.artist-two {
+    background-color: #a97887;
+}
+
+.artist-three {
+    background-color: #c3a26c;
+}
+
+.artist-four {
+    background-color: #9d718c;
+}
+
+.artist-info {
+    padding: 25px;
+}
+
+.artist-category {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.artist-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+.artist-info > p:not(.artist-category) {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.artist-link {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--mulberry-mist);
+}
+
+.artist-link:hover {
+    color: var(--golden-honey);
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-section {
+    padding: 75px 7%;
+
+    background-color: var(--golden-honey);
+
+    text-align: center;
+
+    color: var(--mulberry-mist);
+}
+
+.quote-mark {
+    font-family: "Playfair Display", serif;
+
+    font-size: 70px;
+
+    height: 55px;
+}
+
+.quote-section h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    max-width: 600px;
+
+    margin: 15px auto;
+}
+
+.quote-section p {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+    padding: 120px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.about-content > p:last-child {
+    max-width: 600px;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.about-box {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.about-box div {
+    padding: 25px 35px;
+
+    border-left: 5px solid var(--golden-honey);
+
+    background-color: rgba(255, 248, 229, 0.6);
+
+    border-radius: 500px;
+}
+.about-box div p {
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: var(--dark-mulberry);
+}
+
+.about-box strong {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+.about-box span {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 60px 7% 30px;
+
+    background-color: var(--mulberry-mist);
+
+    color: var(--soft-cream);
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.footer-logo span {
+    color: var(--golden-honey);
+}
+
+footer > p {
+    margin: 12px 0 25px;
+
+    font-size: 14px;
+}
+
+.footer-line {
+    height: 1px;
+
+    background-color: rgba(255, 248, 229, 0.3);
+
+    margin-bottom: 25px;
+}
+
+.copyright {
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   SCROLL ANIMATIONS
+========================================= */
+
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* =========================================
+   FLOATING MUSIC NOTES
+========================================= */
+
+.music-note {
+    position: fixed;
+
+    color: var(--mulberry-mist);
+
+    font-size: 25px;
+
+    opacity: 0.25;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: noteFloat 6s ease-in-out infinite;
+}
+
+.note-one {
+    top: 25%;
+    left: 3%;
+}
+
+.note-two {
+    top: 60%;
+    right: 4%;
+
+    animation-delay: 2s;
+}
+
+.note-three {
+    top: 80%;
+    left: 6%;
+
+    animation-delay: 4s;
+}
+
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+
+@keyframes vinylFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(4deg);
+    }
+}
+
+@keyframes circleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes noteFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        gap: 70px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-decoration {
+        width: 100%;
+    }
+
+    .artist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .login-button {
+        padding: 9px 16px;
+    }
+
+    .hero {
+        padding: 60px 5% 80px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .vinyl {
+        width: 250px;
+        height: 250px;
+    }
+
+    .vinyl-center {
+        width: 80px;
+        height: 80px;
+    }
+
+    .story-section,
+    .artists-section,
+    .about-section {
+        padding: 80px 5%;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .artist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-image {
+        height: 350px;
+    }
+
+    .quote-section {
+        padding: 90px 5%;
+    }
+
+    .quote-section h2 {
+        font-size: 42px;
+    }
+}

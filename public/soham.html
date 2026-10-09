@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soham Naik | Hidden Harmonies</title>
+
+    <link rel="stylesheet" href="css/artist.css">
+
+</head>
+
+<body data-artist-id="4">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#artists">Artists</a>
+        </nav>
+
+        <a href="index.html" class="back-button">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- ARTIST HERO -->
+
+    <section class="artist-hero">
+
+        <div class="artist-photo">
+
+            <img src="songss/soham naik/SN.jpg"
+                 alt="Soham Naik">
+
+        </div>
+
+
+        <div class="artist-intro">
+
+            <p class="small-heading">
+                MEET THE ARTIST
+            </p>
+
+            <h1>
+                Soham <span>Naik</span>
+            </h1>
+
+            <p class="artist-description">
+                A singer and composer whose heartfelt music
+                deserves to reach a much wider audience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="artist-story">
+
+        <p class="small-heading">
+            HIS STORY
+        </p>
+
+        <h2>
+            A voice that deserves
+            <span>to be heard.</span>
+        </h2>
+
+        <p>
+           Soham Naik is a singer and independent music artist known for his soft, melodic vocal style. 
+           He gained recognition through his original and independent songs, including “Bas Ek Baar”, which was 
+           featured in the Indie Pop Song of the Year category at the Mirchi Music Awards. His work represents 
+           the growing space for independent singers outside mainstream Bollywood playback singing
+        </p>
+
+        <p>
+            Through his independent music and compositions,
+            Soham continues to create songs that connect with
+            listeners on a personal level.
+        </p>
+        <p>
+            Awards/recognition:<br>
+            🎵 Mirchi Music Awards – Indie Pop Song of the Year selection for “Bas Ek Baar”<br>
+            🎵 Recognised among the independent music artists featured by the Mirchi Music Awards.
+        </p>
+
+    </section>
+
+
+    <!-- SONGS -->
+
+    <section class="artist-songs">
+
+        <div class="section-heading">
+
+            <p class="small-heading">
+                HIS MUSIC
+            </p>
+
+            <h2>
+                Songs worth
+                <span>discovering.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="song-list" id="songList">
+
+            
+
+        </div>
+
+    </section>
+
+
+    <!-- ARTICLE -->
+
+    <section class="artist-interview">
+
+        <p class="small-heading">
+            HIS VOICE • HIS WORDS
+        </p>
+
+        <h2>
+            Discover his story
+            <span>and his music.</span>
+        </h2>
+
+        <a href="#" class="article-button">
+            Read His Story →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <p>
+            Giving overlooked voices the spotlight they deserve.
+        </p>
+
+    </footer>
+<div id="musicPlayer" style="
+    display:none;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:700px;
+    background:#5E304B;
+    color:#FFF8E5;
+    padding:18px 25px;
+    border-radius:18px;
+    align-items:center;
+    gap:20px;
+    z-index:9999;
+">
+
+    <div style="flex:1;">
+        <strong id="currentSong">No song playing</strong>
+    </div>
+
+    <audio id="audioPlayer" controls></audio>
+
+</div>
+<script src="js/artist.js"></script>
+</body>
+
+</html>

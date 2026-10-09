@@ -1,0 +1,9 @@
+node_modules/
+.env
+.DS_Store
+
+# Large interview videos
+
+public/songss/ronkini gupta/ronkini gupta interview.mp4
+public/songss/shahid mallya/shahid mallya interview.mp4
+public/songss/shruti pathak/shruti pathak interview.mp4

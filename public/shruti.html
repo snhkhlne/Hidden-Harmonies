@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shruti Pathak | Hidden Harmonies</title>
+
+    <link rel="stylesheet" href="css/artist.css">
+
+</head>
+
+<body data-artist-id="1">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#artists">Artists</a>
+        </nav>
+
+        <a href="index.html" class="back-button">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- ARTIST HERO -->
+
+    <section class="artist-hero">
+
+        <div class="artist-photo">
+
+            <img src="songss/shruti pathak/SP.jpeg"
+                 alt="Shruti Pathak">
+
+        </div>
+
+
+        <div class="artist-intro">
+
+            <p class="small-heading">
+                MEET THE ARTIST
+            </p>
+
+            <h1>
+                Shruti <span>Pathak</span>
+            </h1>
+
+            <p class="artist-description">
+                A powerful voice whose music has touched countless
+                listeners, yet deserves to be discovered by many more.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="artist-story">
+
+        <p class="small-heading">
+            HER STORY
+        </p>
+
+        <h2>
+            A voice that deserves
+            <span>to be heard.</span>
+        </h2>
+
+        <p>
+            Shruti Pathak is an Indian playback singer known for her distinctive, expressive voice in Hindi film music. 
+            She began her professional singing career through remix albums and gained wider recognition with “Mar Jawaan” 
+            from Fashion (2008). She later lent her voice to songs such as “Rasiya” (Kurbaan), “Paayaliya” (Dev.D), 
+            “Tujhe Bhula Diya” (Anjaana Anjaani), “Shubhaarambh” (Kai Po Che!) and “Tooh” (Gori Tere Pyaar Mein). 
+            Her singing in Fashion earned her Filmfare and Screen Award nominations for Best Female Playback Singer. 
+            She has also been part of the Mirchi Music Awards jury, reflecting her standing in the Indian music industry.
+        </p>
+
+        <p>
+            From soulful melodies to energetic playback numbers,
+            her versatility has allowed her to explore different
+            emotions and musical styles.
+        </p>
+        <p>
+            Awards/recognition:<br>
+            🎵 Filmfare Award nomination – Best Female Playback Singer for “Mar Jawaan” (Fashion)<br>
+🎵 Screen Award nomination – Best Female Playback Singer for “Mar Jawaan”<br>
+🎵 Mirchi Music Awards recognition – her songs “Mar Jawaan” and “Rasiya” appeared among the Female Vocalist of the Year selections.
+
+        </p>
+
+    </section>
+
+
+    <!-- SONGS -->
+
+    <section class="artist-songs">
+
+        <div class="section-heading">
+
+            <p class="small-heading">
+                HER MUSIC
+            </p>
+
+            <h2>
+                Songs worth
+                <span>discovering.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="song-list" id="songList">
+
+            
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERVIEW -->
+
+    <section class="artist-interview">
+
+        <p class="small-heading">
+            HER VOICE • HER WORDS
+        </p>
+
+        <h2>
+            Hear her story
+            <span>in her own words.</span>
+        </h2>
+
+        <a href="#" class="main-button">
+            Watch Interview →
+        </a>
+
+        <a href="#" class="article-button">
+            Read Her Story →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <p>
+            Giving overlooked voices the spotlight they deserve.
+        </p>
+
+    </footer>
+
+    <div id="musicPlayer" style="
+    display:none;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:700px;
+    background:#5E304B;
+    color:#FFF8E5;
+    padding:18px 25px;
+    border-radius:18px;
+    align-items:center;
+    gap:20px;
+    z-index:9999;
+">
+
+    <div style="flex:1;">
+        <strong id="currentSong">No song playing</strong>
+    </div>
+
+    <audio id="audioPlayer" controls></audio>
+
+</div>
+<script src="js/artist.js"></script>
+</body>
+
+</html>

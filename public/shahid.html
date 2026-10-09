@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shahid Mallya | Hidden Harmonies</title>
+
+    <link rel="stylesheet" href="css/artist.css">
+
+</head>
+
+<body data-artist-id="3">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#artists">Artists</a>
+        </nav>
+
+        <a href="index.html" class="back-button">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- ARTIST HERO -->
+
+    <section class="artist-hero">
+
+        <div class="artist-photo">
+
+            <img src="songss/shahid mallya/SM.jpeg"
+                 alt="Shahid Mallya">
+
+        </div>
+
+
+        <div class="artist-intro">
+
+            <p class="small-heading">
+                MEET THE ARTIST
+            </p>
+
+            <h1>
+                Shahid <span>Mallya</span>
+            </h1>
+
+            <p class="artist-description">
+                A distinctive voice known for bringing emotion
+                and warmth to every melody he sings.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="artist-story">
+
+        <p class="small-heading">
+            HIS STORY
+        </p>
+
+        <h2>
+            A voice that deserves
+            <span>to be heard.</span>
+        </h2>
+
+        <p>
+            Shahid Mallya is an Indian playback singer known for his soulful and folk-influenced vocal style.
+             He made his Bollywood singing debut with “Gurbani” from Yamla Pagla Deewana and gained major recognition 
+             with “Rabba Main To Mar Gaya Oye” from Mausam. He has since sung for films including 2 States, Udta Punjab, 
+             Jab Harry Met Sejal and Rocky Aur Rani Kii Prem Kahaani. He was part of the award-winning album Jab Harry 
+             Met Sejal at the 2018 Mirchi Music Awards and was also nominated for a Filmfare Award for Best Male Playback 
+             Singer for “Kudmayi”
+        </p>
+
+        <p>
+            From romantic melodies to powerful compositions,
+            his versatility has allowed him to create a unique
+            place for himself in Indian music.
+        </p>
+        <p>
+            Awards/recognition:<br>
+            🏆 Mirchi Music Award – Album of the Year (2018) – Jab Harry Met Sejal<br>
+           🏆 Mirchi Music Award – Album of the Year (2015) – 2 States <br>
+           🎵 Filmfare nomination – Best Male Playback Singer for “Kudmayi” (Rocky Aur Rani Kii Prem Kahaani)
+
+
+        </p>
+
+    </section>
+
+
+    <!-- SONGS -->
+
+    <section class="artist-songs">
+
+        <div class="section-heading">
+
+            <p class="small-heading">
+                HIS MUSIC
+            </p>
+
+            <h2>
+                Songs worth
+                <span>discovering.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="song-list" id="songList">
+
+            
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERVIEW -->
+
+    <section class="artist-interview">
+
+        <p class="small-heading">
+            HIS VOICE • HIS WORDS
+        </p>
+
+        <h2>
+            Hear his story
+            <span>in his own words.</span>
+        </h2>
+
+        <a href="#" class="main-button">
+            Watch Interview →
+        </a>
+
+        <a href="#" class="article-button">
+            Read His Story →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <p>
+            Giving overlooked voices the spotlight they deserve.
+        </p>
+
+    </footer>
+
+<div id="musicPlayer" style="
+    display:none;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:700px;
+    background:#5E304B;
+    color:#FFF8E5;
+    padding:18px 25px;
+    border-radius:18px;
+    align-items:center;
+    gap:20px;
+    z-index:9999;
+">
+
+    <div style="flex:1;">
+        <strong id="currentSong">No song playing</strong>
+    </div>
+
+    <audio id="audioPlayer" controls></audio>
+
+</div>
+<script src="js/artist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Content | Hidden Harmonies</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           HIDDEN HARMONIES
+           COLOR PALETTE
+        ========================================= */
+
+        :root {
+
+            --golden-honey: #F4CD3F;
+            --champagne-sand: #EFD99C;
+            --mulberry-mist: #844469;
+            --dark-mulberry: #5E304B;
+            --soft-cream: #FFF8E5;
+
+        }
+
+
+        /* =========================================
+           BASIC RESET
+        ========================================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            background-color: var(--champagne-sand);
+            color: var(--mulberry-mist);
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+            color: inherit;
+
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+
+            width: 100%;
+            padding: 24px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background-color: var(--champagne-sand);
+
+            position: relative;
+            z-index: 10;
+
+        }
+
+
+        .logo {
+
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 700;
+            color: var(--mulberry-mist);
+
+        }
+
+
+        .logo span {
+
+            color: var(--golden-honey);
+
+        }
+
+
+        .navbar nav {
+
+            display: flex;
+            gap: 35px;
+
+        }
+
+
+        .navbar nav a {
+
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+
+        }
+
+
+        .navbar nav a::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 0;
+            height: 2px;
+
+            background-color: var(--golden-honey);
+
+            bottom: -6px;
+            left: 0;
+
+            transition: width 0.3s ease;
+
+        }
+
+
+        .navbar nav a:hover::after {
+
+            width: 100%;
+
+        }
+
+
+        .login-button {
+
+            background-color: var(--mulberry-mist);
+            color: var(--soft-cream);
+
+            padding: 11px 22px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .login-button:hover {
+
+            background-color: var(--golden-honey);
+            color: var(--mulberry-mist);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =========================================
+           PAGE HEADER
+        ========================================= */
+
+        .manage-hero {
+
+            padding: 80px 7% 60px;
+
+        }
+
+
+        .small-heading {
+
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: 600;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .manage-hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(48px, 6vw, 80px);
+
+            line-height: 1;
+
+            font-weight: 600;
+
+            max-width: 850px;
+
+        }
+
+
+        .manage-hero h1 span {
+
+            color: var(--mulberry-mist);
+            font-style: italic;
+
+        }
+
+
+        .manage-hero p {
+
+            max-width: 650px;
+
+            font-size: 17px;
+            line-height: 1.7;
+
+            margin-top: 25px;
+
+        }
+
+
+        /* =========================================
+           CRUD SECTION
+        ========================================= */
+
+        .manage-section {
+
+            padding: 40px 7% 110px;
+
+        }
+
+
+        .manage-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .manage-card {
+
+            background-color: var(--soft-cream);
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            border: 1px solid
+                rgba(132, 68, 105, 0.08);
+
+            min-height: 430px;
+
+        }
+
+
+        .manage-card.create {
+
+            border-top: 5px solid
+                var(--golden-honey);
+
+        }
+
+
+        .manage-card.update {
+
+            border-top: 5px solid
+                var(--mulberry-mist);
+
+        }
+
+
+        .manage-card.delete {
+
+            border-top: 5px solid
+                var(--dark-mulberry);
+
+        }
+
+
+        .crud-number {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 45px;
+
+            color: var(--golden-honey);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .manage-card h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .manage-card > p {
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* =========================================
+           FORM ELEMENTS
+        ========================================= */
+
+        label {
+
+            display: block;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            font-weight: 600;
+
+            margin-top: 17px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        input,
+        select {
+
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 1px solid
+                rgba(132, 68, 105, 0.25);
+
+            border-radius: 8px;
+
+            background-color: white;
+
+            color: var(--dark-mulberry);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            outline: none;
+
+        }
+
+
+        input:focus,
+        select:focus {
+
+            border-color:
+                var(--mulberry-mist);
+
+        }
+
+
+        /* =========================================
+           BUTTONS
+        ========================================= */
+
+        .crud-button {
+
+            width: 100%;
+
+            margin-top: 22px;
+
+            padding: 13px 20px;
+
+            border: none;
+
+            border-radius: 35px;
+
+            background-color: var(--mulberry-mist);
+
+            color: var(--soft-cream);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+        }
+
+
+        .crud-button:hover {
+
+            background-color: var(--golden-honey);
+
+            color: var(--mulberry-mist);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .delete .crud-button {
+
+            background-color:
+                var(--dark-mulberry);
+
+        }
+
+
+        .delete .crud-button:hover {
+
+            background-color:
+                var(--golden-honey);
+
+            color: var(--mulberry-mist);
+
+        }
+
+
+        /* =========================================
+           MESSAGES
+        ========================================= */
+
+        .message {
+
+            margin-top: 15px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            min-height: 20px;
+
+        }
+
+
+        /* =========================================
+           INFO SECTION
+        ========================================= */
+
+        .crud-info {
+
+            margin-top: 35px;
+
+            padding: 25px 30px;
+
+            background-color:
+                var(--mulberry-mist);
+
+            color: var(--soft-cream);
+
+            border-radius: 18px;
+
+        }
+
+
+        .crud-info strong {
+
+            color: var(--golden-honey);
+
+            font-family:
+                "Playfair Display", serif;
+
+            font-size: 22px;
+
+        }
+
+
+        .crud-info p {
+
+            margin-top: 8px;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            padding: 60px 7% 30px;
+
+            background-color:
+                var(--mulberry-mist);
+
+            color: var(--soft-cream);
+
+            text-align: center;
+
+        }
+
+
+        .footer-logo {
+
+            font-family:
+                "Playfair Display", serif;
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+        }
+
+
+        .footer-logo span {
+
+            color: var(--golden-honey);
+
+        }
+
+
+        footer > p {
+
+            margin: 12px 0 25px;
+
+            font-size: 14px;
+
+        }
+
+
+        .footer-line {
+
+            height: 1px;
+
+            background-color:
+                rgba(255, 248, 229, 0.3);
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .copyright {
+
+            opacity: 0.7;
+
+        }
+
+
+        /* =========================================
+           FLOATING MUSIC NOTES
+        ========================================= */
+
+        .music-note {
+
+            position: fixed;
+
+            color: var(--mulberry-mist);
+
+            font-size: 25px;
+
+            opacity: 0.25;
+
+            pointer-events: none;
+
+            z-index: 1;
+
+            animation:
+                noteFloat 6s ease-in-out infinite;
+
+        }
+
+
+        .note-one {
+
+            top: 25%;
+            left: 3%;
+
+        }
+
+
+        .note-two {
+
+            top: 60%;
+            right: 4%;
+
+            animation-delay: 2s;
+
+        }
+
+
+        .note-three {
+
+            top: 80%;
+            left: 6%;
+
+            animation-delay: 4s;
+
+        }
+
+
+        @keyframes noteFloat {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0) rotate(0deg);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-30px) rotate(10deg);
+
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .navbar nav {
+
+                display: none;
+
+            }
+
+
+            .manage-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+
+                padding: 20px 5%;
+
+            }
+
+
+            .logo {
+
+                font-size: 21px;
+
+            }
+
+
+            .login-button {
+
+                padding: 9px 16px;
+
+            }
+
+
+            .manage-hero,
+            .manage-section {
+
+                padding-left: 5%;
+                padding-right: 5%;
+
+            }
+
+
+            .manage-hero {
+
+                padding-top: 60px;
+
+            }
+
+
+            .manage-hero h1 {
+
+                font-size: 52px;
+
+            }
+
+
+            .manage-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="manage.html">
+                Manage Content
+            </a>
+
+        </nav>
+
+
+        <a href="login.html"
+           class="login-button">
+
+            Logout
+
+        </a>
+
+    </header>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <section class="manage-hero">
+
+        <div class="small-heading">
+            CONTENT MANAGEMENT
+        </div>
+
+
+        <h1>
+            Keep the music
+            <span>alive.</span>
+        </h1>
+
+
+        <p>
+            Add new songs, update artist information,
+            and manage the music collection of
+            Hidden Harmonies.
+        </p>
+
+    </section>
+
+
+    <!-- =========================================
+         CRUD
+    ========================================= -->
+
+    <section class="manage-section">
+
+        <div class="manage-grid">
+
+
+            <!-- CREATE -->
+
+            <div class="manage-card create">
+
+                <div class="crud-number">
+                    01
+                </div>
+
+                <h2>
+                    Add a Song
+                </h2>
+
+                <p>
+                    Add a new song to any artist's
+                    collection.
+                </p>
+
+
+                <label for="songArtist">
+                    ARTIST
+                </label>
+
+                <select id="songArtist">
+
+                    <option value="">
+                        Loading artists...
+                    </option>
+
+                </select>
+
+
+                <label for="songName">
+                    SONG NAME
+                </label>
+
+                <input
+                    type="text"
+                    id="songName"
+                    placeholder="Enter song name"
+                >
+
+
+                <label>Select Audio File</label>
+
+<input
+    type="file"
+    id="audioFile"
+    accept="audio/*"
+>
+
+
+                <button
+                    class="crud-button"
+                    onclick="addSong()">
+
+                    Add Song
+
+                </button>
+
+
+                <div
+                    id="addMessage"
+                    class="message">
+                </div>
+
+            </div>
+
+
+            <!-- UPDATE -->
+
+            <div class="manage-card update">
+
+                <div class="crud-number">
+                    02
+                </div>
+
+                <h2>
+                    Change Image
+                </h2>
+
+                <p>
+                    Update the profile image
+                    associated with an artist.
+                </p>
+
+
+                <label for="imageArtist">
+                    ARTIST
+                </label>
+
+                <select id="imageArtist">
+
+                    <option value="">
+                        Loading artists...
+                    </option>
+
+                </select>
+
+
+                <label>Select New Image</label>
+<input
+    type="file"
+    id="imageFile"
+    accept="image/*"
+>
+
+
+                <button
+                    class="crud-button"
+                    onclick="updateImage()">
+
+                    Update Image
+
+                </button>
+
+
+                <div
+                    id="imageMessage"
+                    class="message">
+                </div>
+
+            </div>
+
+
+            <!-- DELETE -->
+
+            <div class="manage-card delete">
+
+                <div class="crud-number">
+                    03
+                </div>
+
+                <h2>
+                    Delete a Song
+                </h2>
+
+                <p>
+                    Remove a song from an
+                    artist's collection.
+                </p>
+
+
+                <label for="deleteSong">
+                    SELECT SONG
+                </label>
+
+                <select id="deleteSong">
+
+                    <option value="">
+                        Loading songs...
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="crud-button"
+                    onclick="deleteSong()">
+
+                    Delete Song
+
+                </button>
+
+
+                <div
+                    id="deleteMessage"
+                    class="message">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFO -->
+
+        <div class="crud-info">
+
+            <strong>
+                Hidden Harmonies • Content Management
+            </strong>
+
+            <p>
+                This section allows the collection
+                to be maintained dynamically using
+                Create, Read, Update and Delete
+                operations connected to the database.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <p>
+            Giving hidden voices the stage they deserve.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <div class="copyright">
+            © 2026 Hidden Harmonies
+        </div>
+
+    </footer>
+
+
+    <!-- MUSIC NOTES -->
+
+    <div class="music-note note-one">♪</div>
+    <div class="music-note note-two">♫</div>
+    <div class="music-note note-three">♪</div>
+
+
+    <!-- CRUD JAVASCRIPT -->
+
+    <script src="js/manage.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ronkini Gupta | Hidden Harmonies</title>
+
+    <link rel="stylesheet" href="css/artist.css">
+
+</head>
+
+<body data-artist-id="2">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#artists">Artists</a>
+        </nav>
+
+        <a href="index.html" class="back-button">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- ARTIST HERO -->
+
+    <section class="artist-hero">
+
+        <div class="artist-photo">
+
+            <img src="songss/ronkini gupta/RG.jpeg"
+                 alt="Ronkini Gupta">
+
+        </div>
+
+
+        <div class="artist-intro">
+
+            <p class="small-heading">
+                MEET THE ARTIST
+            </p>
+
+            <h1>
+                Ronkini <span>Gupta</span>
+            </h1>
+
+            <p class="artist-description">
+                A soulful voice whose melodies carry emotion,
+                depth and stories that deserve to be heard by many more.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="artist-story">
+
+        <p class="small-heading">
+            HER STORY
+        </p>
+
+        <h2>
+            A voice that deserves
+            <span>to be heard.</span>
+        </h2>
+
+        <p>
+            Ronkini Gupta is an acclaimed Indian Hindustani classical vocalist, playback singer, composer, and vocal coach, 
+            renowned for her pitch-perfect rendition and a unique style that fuses elements of the Gwalior and Kirana gharanas.
+             With over 25 years of rigorous training under luminaries such as Pt. Chandrakant Apte, Ustad Dilshad Khan, 
+             Pt. Samaresh Choudhury, and the late Ustad Abdul Rashid Khan, she holds a Sangeet Visharad distinction from 
+             Gandharva Mahavidyalaya
+        </p>
+
+        <p> In 2023, Gupta was honored with the Swar Kokila Lata Mangeshkar Award for her
+             contributions to classical music.<br>
+            From Bollywood songs to independent music,
+            Ronkini has created performances that leave a
+            lasting impression on listeners.
+        </p>
+        <p>Awards/recognition:<br>
+           🏆 Artist Aloud Award – Best Composition (2016) for Ritu Basant Ki with The Kheyaal-E-Jazz Projekt.<br>
+🏆 Artist Aloud Award – Best Hindi Song (2018) for Aye Ri Chandni with The Kheyaal-E-Jazz Projekt.<br>
+🏆 Zee Talkies – Maharashtra Cha Favourite Kon (2020) for Tula Japnaar Aahe from Khari Biscuit.<br>
+🏆 Swar Kokila Lata Mangeshkar Award (2023) <br>
+🎵 Filmfare Award nominations for Best Female Playback Singer — Rafu from Tumhari Sulu (2018) and Chaav Laaga from Sui Dhaaga (2019).<br>
+🎵 She also received All India Rank 4 in Indian Classical Vocal at the Doverlane Music Conference in 2000. 
+
+    </section>
+
+
+    <!-- SONGS -->
+
+    <section class="artist-songs">
+
+        <div class="section-heading">
+
+            <p class="small-heading">
+                HER MUSIC
+            </p>
+
+            <h2>
+                Songs worth
+                <span>discovering.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="song-list" id="songList">
+
+          
+        </div>
+
+    </section>
+
+
+    <!-- INTERVIEW -->
+
+    <section class="artist-interview">
+
+        <p class="small-heading">
+            HER VOICE • HER WORDS
+        </p>
+
+        <h2>
+            Hear her story
+            <span>in her own words.</span>
+        </h2>
+
+        <a href="#" class="main-button">
+            Watch Interview →
+        </a>
+
+        <a href="#" class="article-button">
+            Read Her Story →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <p>
+            Giving overlooked voices the spotlight they deserve.
+        </p>
+
+    </footer>
+<div id="musicPlayer" style="
+    display:none;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:700px;
+    background:#5E304B;
+    color:#FFF8E5;
+    padding:18px 25px;
+    border-radius:18px;
+    align-items:center;
+    gap:20px;
+    z-index:9999;
+">
+
+    <div style="flex:1;">
+        <strong id="currentSong">No song playing</strong>
+    </div>
+
+    <audio id="audioPlayer" controls></audio>
+
+</div>
+<script src="js/artist.js"></script>
+</body>
+
+</html>

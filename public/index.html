@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hidden Harmonies | Stories Behind the Music</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Floating Music Notes -->
+    <div class="music-note note-one">♪</div>
+    <div class="music-note note-two">♫</div>
+    <div class="music-note note-three">♪</div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#story">Our Story</a>
+            <a href="#artists">Artists</a>
+            <a href="#about">About</a>
+            <a href="manage.html">Manage Artist</a>
+        </nav>
+
+        <a href="#" class="login-button" id="profileButton">Login</a>
+       
+      <div id="profileBox" style="display: none;">
+
+    <p id="profileUsername"></p>
+    <p id="profileEmail"></p>
+
+    <button id="editProfileButton">Edit Profile</button>
+    <button id="deleteAccountButton">Delete Account</button>
+    <button id="logoutButton">Logout</button>
+
+</div>
+
+<div id="profileBox" style="display: none;">
+    <p id="profileUsername"></p>
+    <p id="profileEmail"></p>
+    <button id="logoutButton">Logout</button>
+</div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="small-heading">THE STORIES BEHIND THE MUSIC</p>
+
+                <h1>
+                    Some voices deserve
+                    <span>to be heard.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Discover talented artists whose music deserves more
+                    than a moment in the background.
+                </p>
+
+                <a href="#artists" class="main-button">
+                    Discover Artists
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+
+                <div class="vinyl">
+                    <div class="vinyl-center"></div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- STORY SECTION -->
+        <section class="story-section" id="story">
+
+            <div class="section-heading">
+
+                <p class="small-heading">WHY HIDDEN HARMONIES?</p>
+
+               <h2>
+                     Beyond the
+                     spotlight.
+                </h2>
+
+            </div>
+
+            <div class="story-content">
+
+                <div class="story-label reveal">
+                   THE UNHEARD
+                </div>
+
+                <div class="story-text reveal">
+
+                    <p>
+                        The music world is filled with incredible voices,
+                        yet many talented artists remain unknown despite
+                        years of dedication, creativity and hard work.
+                    </p>
+
+                    <p>
+                        Hidden Harmonies is created to give these artists
+                        a space where their music, stories and journeys
+                        can be discovered.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARTISTS SECTION -->
+        <section class="artists-section" id="artists">
+
+            <div class="section-heading">
+
+                <p class="small-heading">MEET THE ARTISTS</p>
+
+                <h2>
+                    Voices waiting
+                    <span>to be discovered.</span>
+                </h2>
+
+                <p>
+                    Explore the artists whose stories deserve a place
+                    in the spotlight.
+                </p>
+
+            </div>
+
+
+          <div class="artist-grid">
+
+    <!-- Shruti Pathak -->
+    <article class="artist-card reveal">
+
+        <div class="artist-image artist-one">
+            <img id="artistImage1" src="songss/shruti pathak/SP.jpeg" alt="Shruti Pathak">
+        </div>
+
+        <div class="artist-info">
+
+            <p class="artist-category">
+                PLAYBACK SINGER • LYRICIST
+            </p>
+
+            <h3>Shruti Pathak</h3>
+
+            <p>
+                A powerful voice behind songs that deserve to be remembered.
+            </p>
+
+           <a href="shruti.html" class="artist-link"
+   onclick="window.open(this.href, '_blank'); return false;">
+    Explore story →
+</a>
+
+        </div>
+
+    </article>
+
+
+    <!-- Ronkini Gupta -->
+    <article class="artist-card reveal">
+
+        <div class="artist-image artist-two">
+            <img id="artistImage2" src="songss/ronkini gupta/RG.jpeg"alt="Ronkini Gupta">
+        </div>
+
+        <div class="artist-info">
+
+            <p class="artist-category">
+                SINGER • PLAYBACK ARTIST
+            </p>
+
+            <h3>Ronkini Gupta</h3>
+
+            <p>
+                A soulful voice carrying stories through every song.
+            </p>
+
+            <a href="ronkini.html" class="artist-link"
+   onclick="window.open(this.href, '_blank'); return false;">
+    Explore story →
+</a>
+
+        </div>
+
+    </article>
+
+
+    <!-- Shahid Mallya -->
+    <article class="artist-card reveal">
+
+        <div class="artist-image artist-three">
+            <img id="artistImage3" src="songss/shahid mallya/SM.jpeg" alt="Shahid Mallya">
+        </div>
+
+        <div class="artist-info">
+
+            <p class="artist-category">
+                PLAYBACK SINGER
+            </p>
+
+            <h3>Shahid Mallya</h3>
+
+            <p>
+                A distinctive voice that brings emotion to every melody.
+            </p>
+
+            <a href="shahid.html" class="artist-link"
+   onclick="window.open(this.href, '_blank'); return false;">
+    Explore story →
+</a>
+
+        </div>
+
+    </article>
+
+
+    <!-- Soham Naik -->
+    <article class="artist-card reveal">
+
+        <div class="artist-image artist-four">
+            <img id="artistImage4" src="songss/soham naik/SN.jpg" alt="Soham Naik">
+        </div>
+
+        <div class="artist-info">
+
+            <p class="artist-category">
+                SINGER • COMPOSER
+            </p>
+
+            <h3>Soham Naik</h3>
+
+            <p>
+                An artist whose music deserves to reach a wider audience.
+            </p>
+
+            <a href="soham.html" class="artist-link"
+   onclick="window.open(this.href, '_blank'); return false;">
+                Explore story →
+            </a>
+
+        </div>
+
+    </article>
+
+</div>  
+
+        </section>
+
+
+        <!-- QUOTE SECTION -->
+        <section class="quote-section">
+
+            <div class="quote-mark"></div>
+
+            <h2>
+                "Every unheard song
+                has a story."
+            </h2>
+
+            <p>
+                Hidden Harmonies exists to help you find it.
+            </p>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <p class="small-heading">ABOUT THE PROJECT</p>
+
+                <h2>
+                    More than a music
+                    <span>collection.</span>
+                </h2>
+
+                <p>
+                    Hidden Harmonies is a digital space dedicated to
+                    discovering lesser-known artists and exploring the
+                    stories behind their music.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+    <div>
+        <strong>Stories</strong>
+
+        <p>
+            Every artist has a journey shaped by their
+            experiences, influences and struggles. We look
+            beyond the music to understand the person
+            behind the voice.
+        </p>
+    </div>
+
+    <div>
+        <strong>Music</strong>
+
+        <p>
+            Songs are more than recordings. They carry
+            emotions, ideas and memories. Hidden Harmonies
+            brings attention to music that may not have
+            reached a mainstream audience.
+        </p>
+    </div>
+
+    <div>
+        <strong>Discovery</strong>
+
+        <p>
+            Discovery is about finding artists outside
+            familiar playlists and popular charts, allowing
+            listeners to explore different voices and
+            musical journeys.
+        </p>
+    </div>
+
+</div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            Hidden <span>Harmonies</span>
+        </div>
+
+        <p>
+            Giving unheard voices a place to be discovered.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 Hidden Harmonies
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
